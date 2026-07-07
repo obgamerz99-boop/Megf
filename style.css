@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ffe4ec, #fff6e5, #ffeaf5, #f8e8ff);
+    background-size: 400% 400%;
+    animation: backgroundMove 15s ease infinite;
+    color: #5a2947;
+    overflow-x: hidden;
+}
+
+
+/* Background */
+
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+#flowers span,
+#hearts span {
+    position: absolute;
+    animation: float 8s linear infinite;
+    opacity: 0.7;
+}
+
+
+#flowers span {
+    font-size: 35px;
+}
+
+#hearts span {
+    font-size: 25px;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 90px;
+    color: #d94f8a;
+    animation: fadeDown 2s;
+}
+
+
+.hero p {
+    font-size: 22px;
+    margin: 20px;
+    color: #7c4560;
+}
+
+
+.tulip {
+    font-size: 70px;
+    animation: bounce 3s infinite;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #ff6fa5;
+    color: white;
+    box-shadow: 0 10px 25px rgba(255,111,165,.4);
+    transition: .3s;
+}
+
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #ff4f91;
+}
+
+
+/* Game */
+
+#game {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#game h2 {
+    font-size: 45px;
+    font-family: 'Great Vibes';
+    color: #d94f8a;
+}
+
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+
+#no {
+    background: #777;
+    position: relative;
+}
+
+
+#funnyMessage {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+/* Love Page */
+
+#lovePage {
+    display: none;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+
+#lovePage h1 {
+    font-family: 'Great Vibes';
+    font-size: 80px;
+    color: #d94f8a;
+}
+
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+
+.photo {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 25px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    transition: .4s;
+}
+
+
+.photo:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+
+.card {
+    background: rgba(255,255,255,.5);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+
+.card h3 {
+    color: #d94f8a;
+    margin-bottom: 15px;
+}
+
+
+/* Letter */
+
+.letter {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255,255,255,.6);
+    backdrop-filter: blur(20px);
+    border-radius: 35px;
+    line-height: 1.9;
+    font-size: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+
+.letter h2 {
+    font-family: 'Great Vibes';
+    font-size: 55px;
+    color: #d94f8a;
+}
+
+
+/* Music Button */
+
+#musicBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    z-index: 10;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 50px;
+}
+
+
+footer h2 {
+    font-family: 'Great Vibes';
+    font-size: 55px;
+    color: #d94f8a;
+}
+
+
+/* Animations */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+@keyframes float {
+
+    from {
+        transform: translateY(100vh) rotate(0);
+    }
+
+    to {
+        transform: translateY(-10vh) rotate(360deg);
+    }
+
+}
+
+
+@keyframes bounce {
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.hero h1 {
+    font-size:60px;
+}
+
+#lovePage h1 {
+    font-size:55px;
+}
+
+.buttons {
+    flex-direction:column;
+}
+
+.letter {
+    padding:25px;
+}
+
+}
